@@ -1,0 +1,39 @@
+[0.967s] Invoking command in '/home/aae4202/ws_4202/src/turtle_control': PYTHONPATH=/home/aae4202/ws_4202/build/turtle_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aae4202/ws_4202/install/turtle_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_control build --build-base /home/aae4202/ws_4202/build/turtle_control/build install --record /home/aae4202/ws_4202/build/turtle_control/install.log --single-version-externally-managed
+[1.274s] running egg_info
+[1.294s] writing ../../build/turtle_control/turtle_control.egg-info/PKG-INFO
+[1.295s] writing dependency_links to ../../build/turtle_control/turtle_control.egg-info/dependency_links.txt
+[1.295s] writing entry points to ../../build/turtle_control/turtle_control.egg-info/entry_points.txt
+[1.295s] writing requirements to ../../build/turtle_control/turtle_control.egg-info/requires.txt
+[1.295s] writing top-level names to ../../build/turtle_control/turtle_control.egg-info/top_level.txt
+[1.335s] reading manifest file '../../build/turtle_control/turtle_control.egg-info/SOURCES.txt'
+[1.336s] Traceback (most recent call last):
+[1.336s]   File "/home/aae4202/ws_4202/src/turtle_control/setup.py", line 5, in <module>
+[1.336s]     setup(
+[1.336s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+[1.336s]     return distutils.core.setup(**attrs)
+[1.336s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 183, in setup
+[1.336s]     return run_commands(dist)
+[1.337s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 199, in run_commands
+[1.337s]     dist.run_commands()
+[1.337s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+[1.337s]     self.run_command(cmd)
+[1.337s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/dist.py", line 950, in run_command
+[1.337s]     super().run_command(command)
+[1.338s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+[1.338s]     cmd_obj.run()
+[1.338s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 311, in run
+[1.338s]     self.find_sources()
+[1.338s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 319, in find_sources
+[1.338s]     mm.run()
+[1.338s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 545, in run
+[1.338s]     self.prune_file_list()
+[1.338s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/command/sdist.py", line 161, in prune_file_list
+[1.339s]     super().prune_file_list()
+[1.339s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list
+[1.339s]     base_dir = self.distribution.get_fullname()
+[1.339s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 267, in get_fullname
+[1.339s]     return _distribution_fullname(self.get_name(), self.get_version())
+[1.339s]   File "/home/aae4202/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 285, in _distribution_fullname
+[1.339s]     canonicalize_version(version, strip_trailing_zero=False),
+[1.339s] TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+[1.370s] Invoked command in '/home/aae4202/ws_4202/src/turtle_control' returned '1': PYTHONPATH=/home/aae4202/ws_4202/build/turtle_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aae4202/ws_4202/install/turtle_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_control build --build-base /home/aae4202/ws_4202/build/turtle_control/build install --record /home/aae4202/ws_4202/build/turtle_control/install.log --single-version-externally-managed

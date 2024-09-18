@@ -1,0 +1,4 @@
+[console_scripts]
+turtle_control_node = turtle_control.turtle_control_node:main
+turtle_pose_show_node = turtle_control.turtle_pose_show_node:main
+
