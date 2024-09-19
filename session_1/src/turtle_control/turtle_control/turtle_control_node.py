@@ -16,7 +16,7 @@ class TurtleControlNode(Node):
         msg.linear.x = self.linear_speed  # 沿x轴的线速度
         msg.angular.z = self.angular_speed  # 绕z轴的角速度
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Publishing velocity: linear={self.linear_speed}, angular={self.angular_speed}, radius={self.radius}')
+        # self.get_logger().info(f'Publishing velocity: linear={self.linear_speed}, angular={self.angular_speed}')
 
 def main(args=None):
     rclpy.init(args=args)
