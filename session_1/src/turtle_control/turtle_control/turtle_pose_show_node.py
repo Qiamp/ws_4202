@@ -15,7 +15,7 @@ class TurtlePoseShowNode(Node):
         self.subscription_2 = self.create_subscription(
             Twist,
             '/turtle1/cmd_vel',
-            self.pose_callback,
+            self.cmd_vel_callback,
             10
         )
 
@@ -23,8 +23,12 @@ class TurtlePoseShowNode(Node):
         x = msg.x
         y = msg.y
         theta = msg.theta
-        radius = msg.linear.x / msg.angular.z
-        self.get_logger().info(f'Turtle position: x={x}, y={y}, theta={theta}, following circle with radius={radius}')
+        self.get_logger().info(f'Turtle position: x={x}, y={y}, theta={theta}')
+
+    def cmd_vel_callback(self, msg):
+        linear_x = msg.linear.x
+        angular_z = msg.angular.z
+        self.get_logger().info(f'Turtle velocity: linear_x={linear_x}, angular_z={angular_z}')
 
 def main(args=None):
     rclpy.init(args=args)
