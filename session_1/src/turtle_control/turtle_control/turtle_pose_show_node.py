@@ -28,7 +28,7 @@ class TurtlePoseShowNode(Node):
     def cmd_vel_callback(self, msg):
         linear_x = msg.linear.x
         angular_z = msg.angular.z
-        self.get_logger().info(f'Turtle velocity: linear_x={linear_x}, angular_z={angular_z},Turtle radius: {linear_x / angular_z}')
+        self.get_logger().info(f'test')
 
 def main(args=None):
     rclpy.init(args=args)
