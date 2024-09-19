@@ -6,6 +6,9 @@ from geometry_msgs.msg import Twist
 class TurtlePoseShowNode(Node):
     def __init__(self):
         super().__init__('turtle_pose_show_node')
+        self.pose = None  # Store the latest pose
+        self.twist = None  # Store the latest twist
+
         self.subscription_1 = self.create_subscription(
             Pose,
             '/turtle1/pose',
@@ -20,15 +23,24 @@ class TurtlePoseShowNode(Node):
         )
 
     def pose_callback(self, msg):
-        x = msg.x
-        y = msg.y
-        theta = msg.theta
-        self.get_logger().info(f'Turtle position: x={x}, y={y}, theta={theta}')
+        self.pose = msg  # Update the latest pose
+        self.publish_info()  # Call publish info to log combined message
 
     def cmd_vel_callback(self, msg):
-        linear_x = msg.linear.x
-        angular_z = msg.angular.z
-        self.get_logger().info(f'Radius:{linear_x/angular_z}')
+        self.twist = msg  # Update the latest twist
+        self.publish_info()  # Call publish info to log combined message
+
+    def publish_info(self):
+        if self.pose and self.twist:  # Ensure both pose and twist have been received
+            x = self.pose.x
+            y = self.pose.y
+            theta = self.pose.theta
+            linear_x = self.twist.linear.x
+            angular_z = self.twist.angular.z
+            radius = linear_x/angular_z
+
+            # Print both pose and radius information
+            self.get_logger().info(f'Turtle position: x={x}, y={y}, theta={theta}, Radius:{radius}')
 
 def main(args=None):
     rclpy.init(args=args)
