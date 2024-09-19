@@ -9,13 +9,13 @@ class TurtlePoseShowNode(Node):
         self.pose = None  # Store the latest pose
         self.twist = None  # Store the latest twist
 
-        self.subscription_1 = self.create_subscription(
+        self.subscription_pose = self.create_subscription(
             Pose,
             '/turtle1/pose',
             self.pose_callback,
             10
         )
-        self.subscription_2 = self.create_subscription(
+        self.subscription_vel = self.create_subscription(
             Twist,
             '/turtle1/cmd_vel',
             self.cmd_vel_callback,

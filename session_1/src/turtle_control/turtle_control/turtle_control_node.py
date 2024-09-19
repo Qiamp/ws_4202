@@ -13,8 +13,8 @@ class TurtleControlNode(Node):
 
     def publish_velocity(self):
         msg = Twist()
-        msg.linear.x = self.linear_speed  # 沿x轴的线速度
-        msg.angular.z = self.angular_speed  # 绕z轴的角速度
+        msg.linear.x = self.linear_speed  # 线速度
+        msg.angular.z = self.angular_speed  # 角速度
         self.publisher_.publish(msg)
         # self.get_logger().info(f'Publishing velocity: linear={self.linear_speed}, angular={self.angular_speed}')
 
